@@ -56,7 +56,7 @@ function generatePassword(){
       case 2:
         if (number===true){
           password = password.concat(String.fromCharCode( 48 + Math.floor(Math.random() * 10)));
-          // Number ASCII starts at 48 with "0", so to get "0" to "9", it's it's 48 + (0 to 9)
+          // Number ASCII starts at 48 with "0", so to get "0" to "9", it's 48 + (0 to 9)
         }
         break;
       case 3:
@@ -73,11 +73,6 @@ function generatePassword(){
       type++;
     }
   }
-  
-  // password=password.concat(String.fromCharCode(97+Math.floor(Math.random() * 26)));
-  // password=password.concat(String.fromCharCode(65+Math.floor(Math.random() * 26)));
-  // password=password.concat(String.fromCharCode(48+Math.floor(Math.random() * 10)));
-  // password=password.concat(specialchars[Math.floor(Math.random() * specialchars.length)]);
 
   return password;
 }
