@@ -33,8 +33,16 @@ function generatePassword(){
   var specialchars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";  // a '\' is added to string breaking components and counted as 1 index
   //  TBH, I'm not sure if some of the charater can break some website or not
   //  However, it can be changed easily
-  console.log(specialchars[Math.floor(Math.random() * specialchars.length)]);
-  console.log(String.fromCharCode(65+Math.floor(Math.random() * 26)));
+  
+  // console.log(specialchars[Math.floor(Math.random() * specialchars.length)]);
+  // console.log(String.fromCharCode(65+Math.floor(Math.random() * 26)));
+  
+  password=password.concat(String.fromCharCode(97+Math.floor(Math.random() * 26)));
+  password=password.concat(String.fromCharCode(65+Math.floor(Math.random() * 26)));
+  password=password.concat(String.fromCharCode(48+Math.floor(Math.random() * 10)));
+  password=password.concat(specialchars[Math.floor(Math.random() * specialchars.length)]);
+
+  return password;
 }
 
 // Get references to the #generate element
